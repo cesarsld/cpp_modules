@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/23 18:56:55 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/23 18:56:58 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/23 19:42:37 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/23 19:58:57 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
-#include <string>
+#include "Pony.hpp"
 
-int main(int ac, char **av)
+void	ponyOnTheStack()
 {
-	av++;
-	if (ac == 1)
-		std::cout <<  "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-		while (*av)
-		{
-			std::string str(*av);
-			for (size_t i = 0; i < str.length(); i++)
-				std::cout << (char)std::toupper(str[i]);
-			av++;
-		}
-	std::cout << "\n";
+	Pony pony("Mike");
+	pony.talk();
+	pony.run();
+}
+
+void	ponyOnTheHeap()
+{
+	Pony *pony = new Pony("Gerald");
+	pony->talk();
+	pony->run();
+	delete pony;
+}
+
+int		main()
+{
+	ponyOnTheStack();
+	std::cout << std::endl;
+	ponyOnTheHeap();
 	return (0);
 }
