@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ex01.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/23 19:42:37 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/23 20:03:57 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/24 10:32:38 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/24 10:38:08 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
+#include <iostream>
+#include <string>
 
-void	ponyOnTheStack()
+void memoryLeak()
 {
-	Pony pony("Mike", false);
-	pony.talk();
-	pony.run();
-	pony.amIMajestic();
+	std::string*	panthere = new std::string("String panthere");
+
+	std::cout << *panthere << std::endl;
+
+	delete panthere;
 }
 
-void	ponyOnTheHeap()
-{
-	Pony *pony = new Pony("Gerald", true);
-	pony->talk();
-	pony->run();
-	pony->amIMajestic();
-	delete pony;
-}
-
-int		main()
-{
-	ponyOnTheStack();
-	std::cout << std::endl;
-	ponyOnTheHeap();
-	return (0);
-}
+// int main()
+// {
+// 	memoryLeak();
+// 	while (1)
+// 		;
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 18:56:37 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/23 19:48:41 by cjaimes          ###   ########.fr       */
+/*   Updated: 2020/03/23 20:03:29 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class Pony
 	bool				majestic;
 	
 	public:
-	Pony(std::string const _name);
+	Pony(std::string const _name, bool maj);
 	void				talk(void);
 	void				run(void);
+	void				amIMajestic();
 };
 
 #endif
