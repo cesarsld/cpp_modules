@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/25 17:31:10 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 19:58:56 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/25 20:22:43 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/25 20:31:45 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEHORDE_HPP
-#define ZOMBIEHORDE_HPP
-#include "Zombie.hpp"
+#include "Human.hpp"
 
-class ZombieHorde
+int main()
 {
-	private:
-	int			n;
-	Zombie*	zombies;
-	public:
-	ZombieHorde(int n);
-	~ZombieHorde();
-	void announce();
-};
-
-#endif
+	Human julie(9000);
+	
+	julie.myIq();
+	std::cout << "My brain address      is " << julie.identify()  << std::endl;
+	std::cout << "My real brain address is " << julie.getBrain().identify() << std::endl;
+	return (0);
+}

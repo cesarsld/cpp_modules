@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/25 17:31:10 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 19:58:56 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/25 20:02:52 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/25 20:31:33 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEHORDE_HPP
-#define ZOMBIEHORDE_HPP
-#include "Zombie.hpp"
+#include "Human.hpp"
 
-class ZombieHorde
+Human::Human(int _iq):
+brain(Brain(_iq))
+{}
+
+void	Human::myIq()
 {
-	private:
-	int			n;
-	Zombie*	zombies;
-	public:
-	ZombieHorde(int n);
-	~ZombieHorde();
-	void announce();
-};
+	std::cout << "My IQ is " << getBrain().getIq() << std::endl;
+}
 
-#endif
+const Brain	&Human::getBrain() const
+{
+	return (brain);
+}
+
+std::string	Human::identify() const
+{
+	return (brain.identify());
+}

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/25 17:31:10 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 19:58:56 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/25 19:27:05 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/25 20:32:33 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEHORDE_HPP
-#define ZOMBIEHORDE_HPP
-#include "Zombie.hpp"
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
+#include <string>
+#include <iostream>
 
-class ZombieHorde
+class Brain
 {
-	private:
-	int			n;
-	Zombie*	zombies;
+	int iq;
+	
 	public:
-	ZombieHorde(int n);
-	~ZombieHorde();
-	void announce();
+	Brain(int _iq);
+	std::string identify() const;
+	int	getIq() const;
 };
 
 #endif
