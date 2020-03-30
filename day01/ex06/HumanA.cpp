@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/25 20:22:43 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/30 11:36:42 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/30 11:52:12 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/30 12:21:23 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "HumanA.hpp"
 
-int main()
+HumanA::HumanA(std::string const &_name, const Weapon &weap):
+weapon(weap), name(_name)
 {
-	Human julie(9000);
-	
-	julie.myIq();
-	std::cout << "My brain address      is " << julie.identify()  << std::endl;
-	std::cout << "My real brain address is " << julie.getBrain().identify() << std::endl;
-	return (0);
+}
+
+void HumanA::attack()
+{
+	std::cout << name << " attacks with his " << weapon.getType() << std::endl;
 }

@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/25 20:22:43 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/30 11:36:42 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/30 11:42:37 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/30 12:05:47 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "Weapon.hpp"
 
-int main()
+Weapon::Weapon():
+type("")
+{}
+
+Weapon::Weapon(std::string const &_type)
 {
-	Human julie(9000);
-	
-	julie.myIq();
-	std::cout << "My brain address      is " << julie.identify()  << std::endl;
-	std::cout << "My real brain address is " << julie.getBrain().identify() << std::endl;
-	return (0);
+	type = _type;
+}
+
+std::string const &Weapon::getType() const
+{
+	return (type);
+}
+
+void Weapon::setType(std::string const &_type)
+{
+	type = _type;
 }

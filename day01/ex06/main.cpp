@@ -5,19 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/25 20:22:43 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/30 11:36:42 by cjaimes          ###   ########.fr       */
+/*   Created: 2020/03/30 11:59:18 by cjaimes           #+#    #+#             */
+/*   Updated: 2020/03/30 12:21:30 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
-	Human julie(9000);
-	
-	julie.myIq();
-	std::cout << "My brain address      is " << julie.identify()  << std::endl;
-	std::cout << "My real brain address is " << julie.getBrain().identify() << std::endl;
-	return (0);
+	{
+		Weapon        club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon        club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.attack();
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
 }
