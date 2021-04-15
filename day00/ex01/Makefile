@@ -15,7 +15,7 @@ NAME		=	phonebook
 
 RM			=	rm -f
 
-CC			=	clang++
+CC			=	clang++ -std=c++98 -pedantic-errors
 
 CFLAGS		=	-Wall -Wextra -Werror
 

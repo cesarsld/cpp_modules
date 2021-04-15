@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/23 18:56:55 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/15 14:49:29 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/13 14:36:32 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/13 15:03:37 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 #include <string>
+#include <iostream>
+#include <cstdlib>
+#include "ClapTrap.hpp"
 
-int main(int ac, char **av)
+class ScavTrap : public ClapTrap
 {
-	av++;
-	if (ac == 1)
-		std::cout <<  "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-		while (*av)
-		{
-			std::string str(*av);
-			for (size_t i = 0; i < str.length(); i++)
-				std::cout << (char)std::toupper(str[i]);
-			av++;
-		}
-	std::cout << "\n";
-	return (0);
-}
+public:
+	ScavTrap(std::string const _n);
+	~ScavTrap();
+	void challengeNewcomer(std::string const &target);
+};
+
+#endif

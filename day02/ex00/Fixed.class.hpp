@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/23 18:56:55 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/15 14:49:29 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/12 17:56:46 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/12 20:24:02 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
-#include <string>
+#ifndef FIXED_CLASS_HPP
+# define FIXED_CLASS_HPP
+# include <iostream>
 
-int main(int ac, char **av)
-{
-	av++;
-	if (ac == 1)
-		std::cout <<  "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-		while (*av)
-		{
-			std::string str(*av);
-			for (size_t i = 0; i < str.length(); i++)
-				std::cout << (char)std::toupper(str[i]);
-			av++;
-		}
-	std::cout << "\n";
-	return (0);
-}
+class Fixed {
+	private:
+		int val;
+		static const int bits = 8;
+
+	public:
+		Fixed(void);
+		~Fixed();
+		Fixed(Fixed const &f);
+		Fixed &operator=(Fixed const &f);
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
+
+};
+
+#endif
