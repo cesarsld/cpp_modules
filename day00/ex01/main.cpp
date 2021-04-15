@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 18:57:04 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/23 18:57:06 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/04/15 15:08:57 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main()
 		std::cout << "> ";
 		std::getline(std::cin, input);
 		if (input.compare("EXIT") == 0)
-			exit(0);
+			break;
 		else if (input.compare("ADD") == 0)
 		{
 			if (current < 8)
@@ -63,7 +63,7 @@ int main()
 		else if (input.compare("SEARCH") == 0)
 		{
 			if (search_contact(phonebook, current))
-				continue ;
+				continue;
 		}
 		else if (input.length() == 0)
 			continue;

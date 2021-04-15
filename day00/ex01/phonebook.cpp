@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 18:57:12 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/23 18:57:37 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/04/15 15:06:02 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 Contact::Contact()
 {
+	return;
 }
 
 Contact::~Contact()
 {
-	delete this;
+	return;
 }
 
 void Contact::setup_data()
