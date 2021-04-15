@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 18:56:55 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/15 14:49:29 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/04/15 15:03:30 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(int ac, char **av)
 {
 	av++;
 	if (ac == 1)
-		std::cout <<  "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout <<  "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 		while (*av)
 		{
