@@ -1,4 +1,4 @@
-SRCS	= main.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp
+SRCS	= main.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp NinjaTrap.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= a.out
@@ -9,7 +9,7 @@ FLAGS	= -Wall -Wextra -Werror
 
 INCLUDE	= none
 
-HEADER	= FragTrap.hpp ScavTrap.hpp ClavTrap.hpp
+HEADER	= FragTrap.hpp ScavTrap.hpp ClavTrap.hpp NinjaTrap.hpp
 
 
 

@@ -6,23 +6,36 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 21:29:50 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 13:34:06 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/04/26 15:17:53 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
+FragTrap::FragTrap() : ClapTrap(){
+	name = "BoringFrag";
+	std::cout << "Hey everybody! " << name << " here! I'm just a boring fragger :(" <<std::endl;
+	fragStats[0] = hp = 100;
+	fragStats[1] = maxHp = 100;
+	fragStats[2] = ep = 100;
+	fragStats[3] = maxEp = 100;
+	fragStats[4] = lvl = 1;
+	fragStats[5] = melee = 30;
+	fragStats[6] = ranged = 20;
+	fragStats[7] = armor = 5;
+}
+
 FragTrap::FragTrap(std::string _n) : ClapTrap(){
 	std::cout << "Hey everybody! " << _n << " here! Check out my package! " <<std::endl;
 	name = _n;
-	hp = 100;
-	maxHp = 100;
-	ep = 100;
-	maxEp = 100;
-	lvl = 1;
-	melee = 30;
-	ranged = 20;
-	armor = 5;
+	fragStats[0] = hp = 100;
+	fragStats[1] = maxHp = 100;
+	fragStats[2] = ep = 100;
+	fragStats[3] = maxEp = 100;
+	fragStats[4] = lvl = 1;
+	fragStats[5] = melee = 30;
+	fragStats[6] = ranged = 20;
+	fragStats[7] = armor = 5;
 }
 
 FragTrap::~FragTrap()

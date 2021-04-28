@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Knight.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 14:58:50 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 13:32:10 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/26 21:50:20 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/26 22:05:32 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef KNIGHT_HPP
+#define KNIGHT_HPP
 #include <string>
 #include <iostream>
 #include <cstdlib>
+#include "Victim.hpp"
 
-class ClapTrap
-{
-protected:
-	int hp;
-	int maxHp;
-	int ep;
-	int maxEp;
-	int lvl;
-	std::string name;
-	int melee;
-	int ranged;
-	int armor;
-public:
-	ClapTrap();
-	ClapTrap(std::string const _n);
-	~ClapTrap();
-	void rangedAttack(std::string const &target);
-	void meleeAttack(std::string const &target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+class Knight : public Victim {
+
+	public:
+		Knight(std::string const _name);
+		~Knight();
+		void getPolymorphed() const;
 };
+
+std::ostream &operator<<(std::ostream &o, Victim const &rhs);
 
 #endif

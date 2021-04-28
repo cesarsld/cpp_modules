@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 15:03:55 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 13:35:20 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/04/26 17:28:45 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ ClapTrap::ClapTrap() : name("Unit-5") {
 
 ClapTrap::~ClapTrap() {
 	std::cout  << name << ": Destroying CLP-TP boring shell... *pouf*" << std::endl;
+}
+
+std::string ClapTrap::getName() const {
+	return name;
 }
 
 void ClapTrap::rangedAttack(std::string const &target)

@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 14:58:50 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 13:32:10 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/04/26 14:13:19 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ public:
 	ClapTrap();
 	ClapTrap(std::string const _n);
 	~ClapTrap();
+	std::string getName() const;
 	void rangedAttack(std::string const &target);
 	void meleeAttack(std::string const &target);
 	void takeDamage(unsigned int amount);
