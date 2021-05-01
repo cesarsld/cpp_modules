@@ -5,41 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 17:40:51 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:48:42 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 19:40:54 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/05/01 03:25:47 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
-#include <string>
-#include <iostream>
-#include <cstdlib>
-#include "AWeapon.hpp"
-#include "Enemy.hpp"
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class Character {
+class Character : public ICharacter {
 	private:
-		std::string name;
-		int ap;
-		AWeapon *weapon;
-
+		std::string _name;
+		AMateria *_inventory[4];
 		Character();
 
 	public:
 		Character(std::string const &name);
 		Character(Character const &copy);
 		virtual ~Character();
-		Character	&operator=(Character const &rhs);
-		void recoverAP();
-		void equip(AWeapon*);
-		void attack(Enemy*);
-		std::string getName() const;
-		int getAp() const;
-		AWeapon *getWeapon() const;
-		
-};
+		Character &operator=(Character const &rhs);
+		std::string const &getName() const;
+		void equip(AMateria *m);
+		void unequip(int idx);
+		void use(int idx, ICharacter &target);
 
-std::ostream &operator<<(std::ostream &o, Character const &_char);
+};
 
 #endif

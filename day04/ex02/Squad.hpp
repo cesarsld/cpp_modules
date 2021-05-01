@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AWeapon.hpp                                        :+:      :+:    :+:   */
+/*   Squad.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/26 22:34:01 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:23:54 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 16:37:59 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/30 18:33:02 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AWEAPON_HPP
-#define AWEAPON_HPP
+#ifndef SQUAD_HPP
+#define SQUAD_HPP
 #include <string>
 #include <iostream>
 #include <cstdlib>
+#include "ISquad.hpp"
 
+typedef struct			s_unit_list {
+	ISpaceMarine		*marine;
+	struct s_unit_list	*next;
+}						t_unit_list;
 
-class AWeapon {
-	protected:
-		std::string name;
-		int ap;
-		int dmg;
-		AWeapon();
+class Squad : public ISquad {
+	private:
+		int count;
+		t_unit_list *units;
 
 	public:
-		AWeapon(std::string const & name, int apcost, int damage);
-		AWeapon(AWeapon const &copy);
-		virtual ~AWeapon();
-
-		AWeapon	&operator=(AWeapon const &rhs);
-		std::string getName() const;
-		int getAPCost() const;
-        int getDamage() const;
-        virtual void attack() const = 0;
+		Squad();
+		Squad(Squad const &copy);
+		virtual ~Squad();
+		Squad &operator=(Squad const &rhs);
+		
+		int getCount() const;
+		ISpaceMarine *getUnit(int) const;
+		int push(ISpaceMarine*);
 };
 
 #endif

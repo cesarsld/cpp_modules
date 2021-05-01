@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   ISquad.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:48:11 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:39 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 16:37:59 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/30 18:42:51 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-#define SUPERMUTANT_HPP
-#include "Enemy.hpp"
+#ifndef ISQUAD_HPP
+#define ISQUAD_HPP
+#include <string>
+#include <iostream>
+#include <cstdlib>
+#include "ISpaceMarine.hpp"
 
-class SuperMutant : public Enemy {
+class ISquad {
 	public:
-		SuperMutant();
-		~SuperMutant();
-		SuperMutant(SuperMutant const &copy);
-		SuperMutant &operator=(SuperMutant const &rhs);
-		void takeDamage(int);
+		virtual ~ISquad() {}
+		virtual int getCount() const = 0;
+		virtual ISpaceMarine *getUnit(int) const = 0;
+		virtual int push(ISpaceMarine*) = 0;
 };
+
+
 
 #endif

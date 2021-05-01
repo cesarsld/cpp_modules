@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   MightySpoon.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:48:11 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:39 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 15:55:06 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/30 15:55:24 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-#define SUPERMUTANT_HPP
-#include "Enemy.hpp"
+#ifndef MIGHTYSPOON_HPP
+#define MIGHTYSPOON_HPP
+#include "AWeapon.hpp"
 
-class SuperMutant : public Enemy {
+
+class MightySpoon: public AWeapon {
 	public:
-		SuperMutant();
-		~SuperMutant();
-		SuperMutant(SuperMutant const &copy);
-		SuperMutant &operator=(SuperMutant const &rhs);
-		void takeDamage(int);
+		MightySpoon();
+		MightySpoon(MightySpoon const &copy);
+		~MightySpoon();
+		MightySpoon	&operator=(MightySpoon const &rhs);
+		void attack() const;
 };
 
 #endif

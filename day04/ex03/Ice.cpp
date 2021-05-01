@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.cpp                                      :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:28:17 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:28 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 19:25:58 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/30 19:38:15 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PowerFist.hpp"
+#include "Ice.hpp"
 
-PowerFist::PowerFist() : AWeapon("Power Fist ", 8, 50){
+Ice::Ice() : AMateria("ice") {
+	_xp = 0;
 	return;
 }
 
-PowerFist::PowerFist(PowerFist const &copy) : AWeapon(copy) {
+Ice::Ice(Ice const &copy) : AMateria(copy) {
+	_xp = 0;
 	return;
 }
 
-PowerFist::~PowerFist() {
+Ice::~Ice() {
 	return;
 }
 
-PowerFist	&PowerFist::operator=(PowerFist const &rhs) {
-	AWeapon::operator=(rhs);
+Ice &Ice::operator=(Ice const &rhs) {
+	AMateria::operator=(rhs);
 	return (*this);
 }
 
-void PowerFist::attack() const {
-	std::cout << "* pschhh... SBAM! *" << std::endl;	
+AMateria *Ice::clone() const {
+	return (new Ice(*this));
+}
+
+void	Ice::use(ICharacter &target) {
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	AMateria::use(target);
 }

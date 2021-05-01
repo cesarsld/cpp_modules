@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:48:11 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:39 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 18:56:25 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/05/01 03:08:19 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-#define SUPERMUTANT_HPP
-#include "Enemy.hpp"
+#ifndef ICHARACTER_HPP
+#define ICHARACTER_HPP
+#include <string>
+#include <iostream>
+#include <cstdlib>
+#include "AMateria.hpp"
 
-class SuperMutant : public Enemy {
+class AMateria;
+
+class ICharacter {
 	public:
-		SuperMutant();
-		~SuperMutant();
-		SuperMutant(SuperMutant const &copy);
-		SuperMutant &operator=(SuperMutant const &rhs);
-		void takeDamage(int);
+		virtual						~ICharacter() {}
+		virtual std::string const	&getName() const = 0;
+		virtual void				equip(AMateria *m) = 0;
+		virtual void				unequip(int idx) = 0;
+		virtual void				use(int idx, ICharacter &target) = 0;
 };
 
 #endif

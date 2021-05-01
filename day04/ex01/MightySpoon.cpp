@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   MightySpoon.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:48:11 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:39 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 15:55:34 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/30 15:56:23 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-#define SUPERMUTANT_HPP
-#include "Enemy.hpp"
+#include "MightySpoon.hpp"
 
-class SuperMutant : public Enemy {
-	public:
-		SuperMutant();
-		~SuperMutant();
-		SuperMutant(SuperMutant const &copy);
-		SuperMutant &operator=(SuperMutant const &rhs);
-		void takeDamage(int);
-};
+MightySpoon::MightySpoon() : AWeapon("Mighty Spoon", 5, 15){
+}
 
-#endif
+MightySpoon::MightySpoon(MightySpoon const &copy) : AWeapon(copy) {
+}
+
+MightySpoon::~MightySpoon() {
+	return;
+}
+
+MightySpoon	&MightySpoon::operator=(MightySpoon const &rhs) {
+	AWeapon::operator=(rhs);
+	return (*this);
+}
+
+void MightySpoon::attack() const {
+	std::cout << "* pft pft pft *" << std::endl;	
+}

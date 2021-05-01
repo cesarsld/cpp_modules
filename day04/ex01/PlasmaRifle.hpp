@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   PlasmaRifle.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:48:11 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:39 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/29 16:17:23 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/29 18:24:25 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-#define SUPERMUTANT_HPP
-#include "Enemy.hpp"
+#ifndef PLASMARIFLE_HPP
+#define PLASMARIFLE_HPP
+#include "AWeapon.hpp"
 
-class SuperMutant : public Enemy {
+
+class PlasmaRifle: public AWeapon {
 	public:
-		SuperMutant();
-		~SuperMutant();
-		SuperMutant(SuperMutant const &copy);
-		SuperMutant &operator=(SuperMutant const &rhs);
-		void takeDamage(int);
+		PlasmaRifle();
+		PlasmaRifle(PlasmaRifle const &copy);
+		~PlasmaRifle();
+		PlasmaRifle	&operator=(PlasmaRifle const &rhs);
+		void attack() const;
 };
 
 #endif

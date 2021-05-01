@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AWeapon.hpp                                        :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/26 22:34:01 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:23:54 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 20:58:52 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/05/01 03:30:57 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AWEAPON_HPP
-#define AWEAPON_HPP
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
+
 #include <string>
 #include <iostream>
 #include <cstdlib>
+#include "IMateriaSource.hpp"
 
-
-class AWeapon {
-	protected:
-		std::string name;
-		int ap;
-		int dmg;
-		AWeapon();
-
+class MateriaSource : public IMateriaSource {
+	private:
+		AMateria *source[4];
 	public:
-		AWeapon(std::string const & name, int apcost, int damage);
-		AWeapon(AWeapon const &copy);
-		virtual ~AWeapon();
-
-		AWeapon	&operator=(AWeapon const &rhs);
-		std::string getName() const;
-		int getAPCost() const;
-        int getDamage() const;
-        virtual void attack() const = 0;
+		MateriaSource();
+		MateriaSource(MateriaSource const &copy);
+		virtual ~MateriaSource();
+		MateriaSource &operator=(MateriaSource const &rhs);
+		void learnMateria(AMateria*);
+		AMateria *createMateria(std::string const &type);
 };
 
 #endif

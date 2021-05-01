@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   EvilRock.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:48:11 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/29 18:24:39 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/04/30 15:57:01 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/04/30 16:33:28 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-#define SUPERMUTANT_HPP
-#include "Enemy.hpp"
+#include "EvilRock.hpp"
 
-class SuperMutant : public Enemy {
-	public:
-		SuperMutant();
-		~SuperMutant();
-		SuperMutant(SuperMutant const &copy);
-		SuperMutant &operator=(SuperMutant const &rhs);
-		void takeDamage(int);
-};
+EvilRock::EvilRock() : Enemy(80, "Evil Rock") {
+	std::cout << "* ... *" << std::endl;
+}
 
-#endif
+EvilRock::EvilRock(EvilRock const &copy) : Enemy(copy){
+	std::cout << "* ... *" << std::endl;
+}
+
+EvilRock	&EvilRock::operator=(EvilRock const &rhs) {
+	Enemy::operator=(rhs);
+	return (*this);
+}
+
+EvilRock::~EvilRock() {
+	std::cout << "* CRACK *" << std::endl;
+}
