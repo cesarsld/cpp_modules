@@ -6,11 +6,12 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 18:03:23 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/06/16 12:15:09 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 13:03:48 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieHorde.hpp"
+# include <cstdlib>
 
 int main()
 {
