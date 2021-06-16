@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 10:57:02 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 16:42:43 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 11:32:20 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ Zombie::Zombie(std::string _name, std::string _type)
 	type = _type;
 }
 
-Zombie::Zombie()
+Zombie::Zombie() : name("Bob"), type("default")
 {
-	name = std::string();
-	type = std::string();
+	return;
 }
 
 Zombie::~Zombie()

@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/23 18:57:23 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/15 15:45:51 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/04 11:05:00 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 class Contact
 {
+	private:
 	std::string	first_name;
 	std::string	last_name;
 	std::string	nickname;

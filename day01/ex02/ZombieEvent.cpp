@@ -6,12 +6,21 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 11:00:58 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 16:35:58 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 11:28:44 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieEvent.hpp"
 #include "Zombie.hpp"
+
+ZombieEvent::ZombieEvent() : type("default") {
+	srand(time(0));
+	return;
+}
+
+ZombieEvent::~ZombieEvent() {
+	return;
+}
 
 void	ZombieEvent::setZombieType(std::string newType)
 {

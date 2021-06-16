@@ -6,15 +6,23 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 20:02:52 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 20:31:33 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 12:37:04 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Human.hpp"
 
+Human::Human() {
+	return;
+}
+
 Human::Human(int _iq):
 brain(Brain(_iq))
 {}
+
+Human::~Human() {
+	return;
+}
 
 void	Human::myIq()
 {

@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 10:44:05 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 12:48:47 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 11:32:22 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Zombie
 	std::string	type;
 
 	public:
-	Zombie(void);
+	Zombie();
 	~Zombie();
 	Zombie(std::string _name, std::string _type);
 	static std::string	randomName(int length);

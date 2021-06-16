@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 17:31:10 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 19:58:56 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 12:13:34 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 class ZombieHorde
 {
 	private:
-	int			n;
-	Zombie*	zombies;
+		int			n;
+		Zombie*	zombies;
+
 	public:
-	ZombieHorde(int n);
-	~ZombieHorde();
-	void announce();
+		ZombieHorde();
+		ZombieHorde(int n);
+		~ZombieHorde();
+		void announce();
 };
 
 #endif

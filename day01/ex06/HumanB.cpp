@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/30 11:52:12 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/30 12:21:18 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 12:44:26 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ HumanB::HumanB(std::string const &_name):
 name(_name)
 {
 	weapon = 0;
+}
+
+HumanB::~HumanB() {
+	return;
 }
 
 void HumanB::attack()

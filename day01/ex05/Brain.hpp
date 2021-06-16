@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 19:27:05 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 20:32:33 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 12:31:09 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@
 
 class Brain
 {
+	private:
 	int iq;
 	
 	public:
+	Brain();
+	~Brain();
 	Brain(int _iq);
 	std::string identify() const;
 	int	getIq() const;

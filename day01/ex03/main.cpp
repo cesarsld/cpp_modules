@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 18:03:23 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 18:07:54 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 12:15:09 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,22 @@
 
 int main()
 {
-	ZombieHorde horde(6);
+	srand(time(0));
 
-	std::cout << "announce\n" << std::endl;
-	horde.announce();
+	std::cout << "--- 1.TEST HORDE OF 5 ---" << std::endl;
+	ZombieHorde testHorde1(5);
+	testHorde1.announce();
+
+	std::cout << "--- 2.TEST HORDE OF 0 ---" << std::endl;
+	ZombieHorde testHorde2(0);
+	testHorde2.announce();
+
+	std::cout << "--- 3.TEST HORDE OF -5 ---" << std::endl;
+	ZombieHorde testHorde3(-5);
+	testHorde3.announce();
+
+	std::cout << "--- 4.TEST HORDE OF 20 ---" << std::endl;
+	ZombieHorde testHorde4(20);
+	testHorde4.announce();
 	return (0);
 }

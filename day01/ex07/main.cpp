@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/30 12:28:03 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/30 13:27:53 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 12:49:00 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,15 @@ int replace (std::string filename, std::string	s1, std::string	s2)
 
 	outname = filename + ".replace";
 	file.open(filename, std::ios::in);
-	out.open(outname, std::ios::out);
 
-	if (!file.is_open() || !out.is_open())
+	if (!file.is_open())
 	{
 		std::cout << "Could not open file" << std::endl;
+		return (0);
+	}
+	out.open(outname, std::ios::out);
+	if (!out.is_open()) {
+		std::cout << "Could not create file" << std::endl;
 		return (0);
 	}
 	while (getline(file, line))

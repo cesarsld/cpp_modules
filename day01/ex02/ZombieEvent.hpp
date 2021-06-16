@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 10:44:05 by cjaimes           #+#    #+#             */
-/*   Updated: 2020/03/25 12:32:42 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 11:28:02 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ class ZombieEvent
 	std::string	type;
 
 	public:
-	void			setZombieType(std::string _type);
-	Zombie*				newZombie(std::string _name);
-	Zombie*				randomChump(void);
+		ZombieEvent();
+		~ZombieEvent();
+		void				setZombieType(std::string _type);
+		Zombie*				newZombie(std::string _name);
+		Zombie*				randomChump(void);
 };
 
 #endif
