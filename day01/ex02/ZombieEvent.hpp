@@ -6,13 +6,14 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 10:44:05 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/06/16 11:28:02 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/16 13:02:30 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIEEVENT_HPP
 # define ZOMBIEEVENT_HPP
 #include <string>
+# include <ctime>
 #include "Zombie.hpp"
 
 class ZombieEvent
