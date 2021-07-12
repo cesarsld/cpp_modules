@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 21:35:20 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 13:38:49 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/08 15:18:46 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,18 @@ int	main() {
 	std::cout << std::endl;
 
 	std::cout << "--- Test attack functions ---" << std::endl;
-	frag.meleeAttack("Rambo");
-	scav.meleeAttack("Dumbo");
-	frag.rangedAttack("Bobby");
-	scav.rangedAttack("Aang");
+	frag.attack("Rambo");
+	scav.attack("Dumbo");
+	frag.attack("Bobby");
+	scav.attack("Aang");
 	std::cout << std::endl;
 
-	std::cout << "--- Test vaulthunter_dot_exe ---" << std::endl;
-	for (int i = 0 ; i < 6 ; i++) {
-		frag.vaulthunter_dot_exe("Jeff");
-	}
+	std::cout << "--- Test high five ---" << std::endl;
+	frag.highFivesGuys();
 	std::cout << std::endl;
 
-	std::cout << "--- Test challengeNewcomer ---" << std::endl;
-	for (int i = 0 ; i < 6 ; i++) {
-		scav.challengeNewcomer("Boop");
-	}
+	std::cout << "--- Test guard ---" << std::endl;
+	scav.guardGate();
 	std::cout << std::endl;
 
 	std::cout << "--- Destructor messages should be below ---" << std::endl;

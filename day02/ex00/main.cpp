@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 20:02:48 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/12 20:17:15 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/06/18 12:02:39 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,9 @@ int main()
 {
 	Fixed a;
 	Fixed b(a);
-	Fixed c;
-
-	c = b;
+	Fixed c = b;
 
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
-
 }

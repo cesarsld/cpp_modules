@@ -6,11 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 21:35:20 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/13 14:46:57 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/08 12:46:04 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -19,7 +19,7 @@ int	main() {
 	// setting random seed (different every second)
 	srand(time(0));
 
-	FragTrap clappy("Mike");
+	ClapTrap clappy("Mike");
 
 	std::cout << std::endl;
 	std::cout << "--- Test takeDamage ---" << std::endl;
@@ -31,13 +31,8 @@ int	main() {
 	clappy.beRepaired(200);
 	std::cout << std::endl;
 	std::cout << "--- Test attack functions ---" << std::endl;
-	clappy.meleeAttack("John");
-	clappy.rangedAttack("Wick");
-	std::cout << std::endl;
-	std::cout << "--- Test vaulthunter_dot_exe ---" << std::endl;
-	for (int i = 0 ; i < 6 ; i++) {
-		clappy.vaulthunter_dot_exe("Jeff");
-	}
+	clappy.attack("John");
+	clappy.attack("Wick");
 	std::cout << std::endl;
 
 	std::cout << "--- Destructor messages should be below ---" << std::endl;

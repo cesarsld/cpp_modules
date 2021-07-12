@@ -6,11 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 21:35:20 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/13 14:47:36 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/08 15:09:11 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include <iostream>
 #include <cstdlib>
@@ -20,41 +20,35 @@ int	main() {
 	// setting random seed (different every second)
 	srand(time(0));
 
-	FragTrap clappy("Clappy");
-	ScavTrap scavy("Scavy");
+	ClapTrap frag("Frank");
+	ScavTrap scav("Tony");
 
 	std::cout << std::endl;
 	std::cout << "--- Test takeDamage ---" << std::endl;
-	clappy.takeDamage(50);
-	clappy.takeDamage(70);
-	scavy.takeDamage(10);
-	scavy.takeDamage(2000);
+	frag.takeDamage(50);
+	frag.takeDamage(70);
+	scav.takeDamage(10);
+	scav.takeDamage(2000);
 	std::cout << std::endl;
 
 	std::cout << "--- Test beRepaired ---" << std::endl;
-	clappy.beRepaired(20);
-	clappy.beRepaired(200);
-	scavy.beRepaired(99);
-	scavy.beRepaired(1000);
+	frag.beRepaired(20);
+	frag.beRepaired(200);
+	scav.beRepaired(99);
+	scav.beRepaired(1000);
 	std::cout << std::endl;
 
 	std::cout << "--- Test attack functions ---" << std::endl;
-	clappy.meleeAttack("Rambo");
-	scavy.meleeAttack("Dumbo");
-	clappy.rangedAttack("Bobby");
-	scavy.rangedAttack("Aang");
+	frag.attack("Rambo");
+	scav.attack("Dumbo");
+	frag.attack("Bobby");
+	scav.attack("Aang");
 	std::cout << std::endl;
 
-	std::cout << "--- Test vaulthunter_dot_exe ---" << std::endl;
-	for (int i = 0 ; i < 6 ; i++) {
-		clappy.vaulthunter_dot_exe("Jeff");
-	}
-	std::cout << std::endl;
 
-	std::cout << "--- Test challengeNewcomer ---" << std::endl;
-	for (int i = 0 ; i < 6 ; i++) {
-		scavy.challengeNewcomer("Boo");
-	}
+	std::cout << "--- Test Safe Guard ---" << std::endl;
+	scav.guardGate();
+
 	std::cout << std::endl;
 
 	std::cout << "--- Destructor messages should be below ---" << std::endl;

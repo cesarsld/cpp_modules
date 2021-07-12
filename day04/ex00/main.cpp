@@ -5,35 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/26 21:59:33 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 22:07:13 by cjaimes          ###   ########.fr       */
+/*   Created: 2021/07/10 01:34:37 by cjaimes           #+#    #+#             */
+/*   Updated: 2021/07/10 01:56:12 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Victim.hpp"
-#include "Peon.hpp"
-#include "Knight.hpp"
-#include <iostream>
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-int	main() {
-	Sorcerer	robert("Robert", "the Magnificent");
-
-	Victim		jim("Jimmy");
-	Peon		joe("Joe");
-	Knight		jack("Jack");
-
-	std::cout << std::endl;
-
-	std::cout << robert << jim << joe << jack;
+int main()
+{
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
 
 	std::cout << std::endl;
 
-	robert.polymorph(jim);
-	robert.polymorph(joe);
-	robert.polymorph(jack);
+	const WrongAnimal* w = new WrongCat();
+	std::cout << w->getType() << " " << std::endl;
+	w->makeSound();
 
-	std::cout << std::endl;
-
-	return (0);
 }

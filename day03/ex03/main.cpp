@@ -6,13 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 21:35:20 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 14:16:38 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/09 13:46:52 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
-#include "NinjaTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -21,56 +19,35 @@ int	main() {
 	// setting random seed (different every second)
 	srand(time(0));
 
-	ClapTrap clap;
-	FragTrap frag("Frank");
-	ScavTrap scav("Tony");
-	NinjaTrap ninja("Sasuke");
+	DiamondTrap dia("Greg");
 
 	std::cout << std::endl;
 	std::cout << "--- Test takeDamage ---" << std::endl;
-	frag.takeDamage(50);
-	frag.takeDamage(70);
-	scav.takeDamage(10);
-	scav.takeDamage(2000);
-	ninja.takeDamage(2);
-	ninja.takeDamage(40);
+	dia.takeDamage(50);
+	dia.takeDamage(70);
+	dia.takeDamage(2000);
 	std::cout << std::endl;
 
 	std::cout << "--- Test beRepaired ---" << std::endl;
-	frag.beRepaired(20);
-	frag.beRepaired(200);
-	scav.beRepaired(99);
-	scav.beRepaired(1000);
-	ninja.beRepaired(10);
-	ninja.beRepaired(12);
+	dia.beRepaired(20);
+	dia.beRepaired(99);
 	std::cout << std::endl;
 
 	std::cout << "--- Test attack functions ---" << std::endl;
-	frag.meleeAttack("Rambo");
-	scav.meleeAttack("Dumbo");
-	frag.rangedAttack("Bobby");
-	scav.rangedAttack("Aang");
-	ninja.meleeAttack("Glenn");
-	ninja.rangedAttack("Patrick");
+	dia.ScavTrap::attack("Rambo");
+	dia.ScavTrap::attack("Dumbo");
+	dia.ScavTrap::attack("Bobby");
 	std::cout << std::endl;
 
-	std::cout << "--- Test vaulthunter_dot_exe ---" << std::endl;
-	for (int i = 0 ; i < 6 ; i++) {
-		frag.vaulthunter_dot_exe("Jeff");
-	}
+	std::cout << "--- Test high five ---" << std::endl;
+	dia.highFivesGuys();
 	std::cout << std::endl;
 
-	std::cout << "--- Test challengeNewcomer ---" << std::endl;
-	for (int i = 0 ; i < 6 ; i++) {
-		scav.challengeNewcomer("Boop");
-	}
+	std::cout << "--- Test guard ---" << std::endl;
+	dia.guardGate();
 	std::cout << std::endl;
 
-	std::cout << "--- Test ninjaShoebox ---" << std::endl;
-	ninja.ninjaShoebox(clap);
-	ninja.ninjaShoebox(frag);
-	ninja.ninjaShoebox(scav);
-	ninja.ninjaShoebox(ninja);
+	dia.whoAmI();
 	std::cout << std::endl;
 
 	std::cout << "--- Destructor messages should be below ---" << std::endl;

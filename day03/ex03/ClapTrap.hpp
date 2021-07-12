@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 14:58:50 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/26 14:13:19 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/08 12:45:08 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,20 @@
 class ClapTrap
 {
 protected:
+	std::string name;
 	int hp;
 	int maxHp;
 	int ep;
 	int maxEp;
-	int lvl;
-	std::string name;
-	int melee;
-	int ranged;
-	int armor;
+	int ad;
+
 public:
 	ClapTrap();
-	ClapTrap(std::string const _n);
+	ClapTrap(std::string const name);
+	ClapTrap &operator=(ClapTrap const &rhs);
+	ClapTrap(ClapTrap const &copy);
 	~ClapTrap();
-	std::string getName() const;
-	void rangedAttack(std::string const &target);
-	void meleeAttack(std::string const &target);
+	void attack(std::string const &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };

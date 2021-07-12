@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 14:03:20 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/05/07 14:28:33 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/12 11:36:01 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Array {
 				arr[i] = rhs[i];
 			return (*this);
 		}
-		T &operator[](unsigned int i) {
+		T &operator[](unsigned int i) const {
 			if (i >= len)
 				throw OutOfBoundariesException();
 			return arr[i];

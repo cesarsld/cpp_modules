@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/01 20:25:05 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/05/03 18:10:08 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/11 13:32:35 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,19 @@ int	main() {
 	std::cout << std::endl;
 
 	std::cout << "--- 3. Creating a valid Form and describing it ---" << std::endl;
-		Form coolForm("the cool form", 10, 50);
-		std::cout << coolForm;
+	Form coolForm("the cool form", 10, 50);
+	std::cout << coolForm;
 	std::cout << std::endl;
 
 	std::cout << "--- 4. Creating a valid Bureaucrat and describing it ---" << std::endl;
-		Bureaucrat bob("Bobby", 14);
-		std::cout << bob;
+	Bureaucrat bob("Bobby", 14);
+	std::cout << bob;
 	std::cout << std::endl;
 
 	std::cout << "--- 5. Bobby tries to sign a form too high for him ---" << std::endl;
-		bob.signForm(coolForm);
-		std::cout << bob;
-		std::cout << coolForm;
+	bob.signForm(coolForm);
+	std::cout << bob;
+	std::cout << coolForm;
 	std::cout << std::endl;
 
 	std::cout << "--- 5. Bobby gets a couple promotion and tries again ---" << std::endl;

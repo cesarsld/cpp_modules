@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 16:10:13 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/05/07 18:10:38 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/12 12:12:24 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Span {
 		void addNumber(int n);
 		long shortestSpan();
 		long longestSpan() const ;
+		
 		template<typename Iter>
 		void addNumber(Iter start, Iter end) {
 			int left = static_cast<int>(max) - static_cast<int>(list.size());

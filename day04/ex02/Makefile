@@ -1,4 +1,4 @@
-SRCS	= main.cpp Squad.cpp TacticalMarine.cpp AssaultTerminator.cpp
+SRCS	= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= a.out
@@ -9,7 +9,7 @@ FLAGS	= -Wall -Wextra -Werror
 
 INCLUDE	= none
 
-HEADER	= ISquad.hpp Squad.hpp TacticalMarine.hpp AssaultTerminator.hpp ISpaceMarine.hpp
+HEADER	= Animal.hpp Dog.hpp Cat.hpp WrongAnima.hpp WrongCat.hpp Brain.hpp
 
 
 

@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 13:48:40 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/05/07 14:02:21 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/12 09:24:38 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ template<typename T>
 void iter(T *array, int len, void (*f)(T &)) {
 	if (!array)
 		return;
-		int i = 0;
+	int i = 0;
 	while(i < len)
 		f(array[i++]);
 }

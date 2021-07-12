@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 14:36:32 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/04/13 15:03:37 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/08 16:15:38 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,18 @@
 #include <cstdlib>
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : public virtual ClapTrap
 {
+	protected:
+	int scavStats[8];
 public:
+	ScavTrap();
 	ScavTrap(std::string const _n);
+	ScavTrap(ScavTrap const &copy);
 	~ScavTrap();
-	void challengeNewcomer(std::string const &target);
+	ScavTrap &operator=(ScavTrap const &rhs);
+	void attack(std::string const &target);
+	void guardGate();
 };
 
 #endif

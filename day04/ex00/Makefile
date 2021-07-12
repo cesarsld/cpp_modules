@@ -1,4 +1,4 @@
-SRCS	= main.cpp Peon.cpp Victim.cpp Sorcerer.cpp Knight.cpp
+SRCS	= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= a.out
@@ -9,7 +9,7 @@ FLAGS	= -Wall -Wextra -Werror
 
 INCLUDE	= none
 
-HEADER	= Peon.hpp Victim.hpp Sorcerer.hpp Knight.hpp
+HEADER	= Animal.hpp Dog.hpp Cat.hpp WrongAnima.hpp WrongCat.hpp
 
 
 

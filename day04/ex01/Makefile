@@ -1,4 +1,4 @@
-SRCS	= main.cpp AWeapon.cpp PlasmaRifle.cpp PowerFist.cpp Enemy.cpp Character.cpp SuperMutant.cpp RadScorpion.cpp EvilRock.cpp MightySpoon.cpp
+SRCS	= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 NAME	= a.out
@@ -9,7 +9,7 @@ FLAGS	= -Wall -Wextra -Werror
 
 INCLUDE	= none
 
-HEADER	= AWeapon.hpp PlasmaRifle.hpp PowerFist.hpp Character.hpp Enemy.hpp SuperMutant.hpp RadScorpion.hpp EvilRock.hpp MightySpoon.hpp
+HEADER	= Animal.hpp Dog.hpp Cat.hpp WrongAnima.hpp WrongCat.hpp Brain.hpp
 
 
 

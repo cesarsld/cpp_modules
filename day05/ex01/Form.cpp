@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/01 21:25:12 by cjaimes           #+#    #+#             */
-/*   Updated: 2021/05/03 18:18:02 by cjaimes          ###   ########.fr       */
+/*   Updated: 2021/07/11 13:34:07 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ void Form::beSigned(Bureaucrat const &crat) {
 }
 
 const char *Form::GradeTooHighException::what() const throw() {
-	return ("Grade over 150.");
+	return ("Grade too high.");
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
-	return ("Grade under 1.");
+	return ("Grade under low.");
 }
 
 int	Form::getGradeToSign() const {
